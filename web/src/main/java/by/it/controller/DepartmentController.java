@@ -17,16 +17,9 @@ public class DepartmentController extends HttpServlet {
         Action action = Actions.defineFrom(req);
         String nexAction = action.execute(req);
 
-        if (nexAction.equals("index")){
-
         RequestDispatcher r = getServletContext().getRequestDispatcher(action.getJsp(nexAction));
         r.forward(req, resp);
-
-        if (nexAction == null) {
-            RequestDispatcher r = getServletContext().getRequestDispatcher(action.getJsp());
-            r.forward(req, resp);
-        } else
-            resp.sendRedirect("do?command="+nexAction);
+//77878
     }
 
     @Override
@@ -36,10 +29,6 @@ public class DepartmentController extends HttpServlet {
 
         RequestDispatcher r = getServletContext().getRequestDispatcher(action.getJsp(nexAction));
         r.forward(req, resp);
-//        if (nexAction == null) {
-//            RequestDispatcher r = getServletContext().getRequestDispatcher(action.getJsp());
-//            r.forward(req, resp);
-//        } else
-//            resp.sendRedirect("do?command="+nexAction);
+
     }
 }

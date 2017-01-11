@@ -1,9 +1,7 @@
 package by.it.dao;
 
 import by.it.connection.ConnectionCreator;
-import by.it.dto.MyOrderDTO;
 import by.it.dto.ShoesDTO;
-import by.it.entities.Shoes;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
